@@ -7,6 +7,7 @@ export default {
       http: {
         method: 'get',
         path: 'products/{id}',
+        cors: true,
         documentation: {
           summary: 'Get Product by id',
           description: 'The response from the lambda should be a full exact product',

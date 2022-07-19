@@ -10,6 +10,12 @@ paths:
   /products:
     get:
       operationId: getProductsList
-      summary: Get Products Listr
+      summary: Get Products List
       description: The response from the lambda should be a full array of products
+      responses: {}
+  '/products/{id}':
+    get:
+      operationId: getProductById
+      summary: Get Product by id
+      description: The response from the lambda should be a full exact product
       responses: {}

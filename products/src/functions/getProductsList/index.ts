@@ -7,6 +7,7 @@ export default {
       http: {
         method: 'get',
         path: 'products',
+        cors: true,
         documentation: {
           summary: 'Get Products List',
           description: 'The response from the lambda should be a full array of products',
