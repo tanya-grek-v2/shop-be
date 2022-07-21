@@ -1,12 +1,16 @@
 import 'source-map-support/register';
 
-import { formatJSONResponse } from '@libs/apiGateway';
+import { formatJSONResponse, notFoundResponse } from '@libs/apiGateway';
 import { middyfy } from '@libs/lambda';
 
 import PRODUCTS_LIST from '../../mock';
 
 const getProductById = async (event) => {
   const product = PRODUCTS_LIST.find(p => p.id === event.pathParameters.id);
+
+  if (!product) {
+    return notFoundResponse();
+  }
 
   return formatJSONResponse({
     data: product,
