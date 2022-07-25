@@ -1,0 +1,21 @@
+openapi: 3.0.0
+components:
+  schemas: {}
+  securitySchemes: {}
+info:
+  title: Online Shop
+  description: This is my API for Online Shop
+  version: '1'
+paths:
+  /products:
+    get:
+      operationId: getProductsList
+      summary: Get Products List
+      description: The response from the lambda should be a full array of products
+      responses: {}
+  '/products/{id}':
+    get:
+      operationId: getProductById
+      summary: Get Product by id
+      description: The response from the lambda should be a full exact product
+      responses: {}
