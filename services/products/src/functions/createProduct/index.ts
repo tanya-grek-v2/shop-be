@@ -5,14 +5,14 @@ export default {
   events: [
     {
       http: {
-        method: 'get',
+        method: 'post',
         path: 'products',
         cors: true,
         documentation: {
-          summary: 'Get Products List',
-          description: 'The response from the lambda should be a full array of products',
+          summary: 'Add Product',
+          description: 'Add Product',
           responses: {
-              "description": "a list to be returned",
+              "description": "a pet to be returned",
           }
         }
       },

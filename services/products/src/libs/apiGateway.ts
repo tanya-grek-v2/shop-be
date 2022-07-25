@@ -29,3 +29,30 @@ export const notFoundResponse = () => {
     }),
   }
 }
+
+export const invalidDataResponse = () => {
+  return {
+    statusCode: 400,
+    headers: {
+      "Access-Control-Allow-Headers" : "Content-Type",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+    },
+    body: JSON.stringify({
+      message: "Data is invalid",
+    }),
+  }
+}
+export const defaultErrorResponse = () => {
+  return {
+    statusCode: 500,
+    headers: {
+      "Access-Control-Allow-Headers" : "Content-Type",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+    },
+    body: JSON.stringify({
+      message: "Oops, something went wrong",
+    }),
+  }
+}

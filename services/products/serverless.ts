@@ -2,6 +2,7 @@ import type { AWS } from '@serverless/typescript';
 
 import getProductsList from '@functions/getProductsList';
 import getProductById from '@functions/getProductById';
+import createProduct from '@functions/createProduct';
 
 const serverlessConfiguration: AWS = {
   service: 'products',
@@ -21,6 +22,7 @@ const serverlessConfiguration: AWS = {
     'serverless-webpack',
     'serverless-openapi-documentation',
     'serverless-offline',
+    'serverless-dotenv-plugin',
   ],
   provider: {
     name: 'aws',
@@ -39,6 +41,7 @@ const serverlessConfiguration: AWS = {
   functions: {
     getProductsList,
     getProductById,
+    createProduct,
   },
 };
 
